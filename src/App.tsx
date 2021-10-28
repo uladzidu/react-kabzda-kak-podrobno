@@ -6,21 +6,36 @@ export function App() {
     return (
         <div>
             Hey
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
+            <Accordion/>
         </div>
     )
 }
 
-function Star() {
+function Accordion() {
     return (
         <div>
-            <div>star</div>
+            <AccordionTitle />
+            <AccordionBody />
         </div>
     )
 }
 
+function AccordionTitle() {
+    return (
+        <div>
+            <h3>Меню</h3>
+        </div>
+    )
+}
 
-
+function AccordionBody() {
+    return (
+        <div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    )
+}
