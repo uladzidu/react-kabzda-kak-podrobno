@@ -1,0 +1,29 @@
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: 15px;
+
+}
+
+.buttonOn {
+    height: 40px;
+    width: 70px;
+}
+
+.buttonOff {
+    height: 40px;
+    width: 70px;
+}
+
+.buttonValueTrue {
+    background-color: limegreen;
+}
+
+.buttonValueFalse {
+    background-color: red;
+}
+
+
+
