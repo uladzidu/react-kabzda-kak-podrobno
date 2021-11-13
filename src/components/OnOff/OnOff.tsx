@@ -12,27 +12,44 @@ import c from './OnOff.module.css'
 //     )
 // }
 
-export const OnOff1 = (props: PropsType) => {
-    if (props.value) {
-        return (
-            <div>
-                <button className={`${c.buttonOn} ${c.buttonValueTrue}`}>On</button>
-                <button className={c.buttonOff}>Off</button>
-                <button className={`${c.circle} ${c.buttonValueTrue}`}/>
-            </div>
-        )
-    } else {
-        return (
-            <div>
-                <button className={c.buttonOff}>On</button>
-                <button className={`${c.buttonOff} ${c.buttonValueFalse}`}>Off</button>
-                <button className={`${c.circle} ${c.buttonValueFalse}`}/>
-            </div>
-        )
+export const OnOff = (props : PropsType) => {
+
+    const circle = {
+        height: "20px",
+        width: "20px",
+        border: "1px solid black",
+        borderRadius : "50px",
+        marginLeft: "15px",
+        display: "inline-block",
+        marginTop: "50px",
+        backgroundColor: props.value ? "green" : "red"
+}
+    const buttonOff = {
+        height: "40px",
+        width: "70px",
+        border: "1px solid black",
+        display: "inline-block",
+        backgroundColor: props.value ? "white" : "red"
     }
+    const buttonOn = {
+        height: "40px",
+        width: "70px",
+        border: "1px solid black",
+        display: "inline-block",
+        backgroundColor : props.value ? "green" : "white"
+    }
+return (
+    <div>
+        <div style={buttonOn}>On</div>
+        <div style={buttonOff}>Off</div>
+        <div style={circle}></div>
+    </div>
+)
+
 }
 
 
-export type PropsType = {
+
+type PropsType = {
     value: boolean
 }
