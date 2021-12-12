@@ -1,10 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 
-export const UncontrolledOnOff = (props: PropsType) => {
-
-    let [on, setOn] = useState(false);
-
+export const ControlledOnOff = (props: PropsType) => {
 
     const circle = {
         height: '20px',
@@ -14,33 +11,32 @@ export const UncontrolledOnOff = (props: PropsType) => {
         marginLeft: '15px',
         display: 'inline-block',
         marginTop: '50px',
-        backgroundColor: on ? 'limegreen' : 'red'
+        backgroundColor: props.on ? 'limegreen' : 'red'
     }
     const buttonOff = {
         height: '40px',
         width: '70px',
         border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: on ? 'white' : 'red'
+        backgroundColor: props.on ? 'white' : 'red'
     }
     const buttonOn = {
         height: '40px',
         width: '70px',
         border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: on ? 'limegreen' : 'white'
+        backgroundColor: props.on ? 'limegreen' : 'white'
     }
     return (
         <div>
-            <button style={buttonOn} onClick={() => {setOn(true)}}>On
-            </button>
-            <button style={buttonOff} onClick={() => {setOn(false)}}>Off</button>
-            <button style={circle}></button>
+            <button style={buttonOn}>On</button>
+            <button style={buttonOff}>Off</button>
+            <button style={circle}/>
         </div>
     )
 
 }
 
 type PropsType = {
-    // on: boolean
+    on: boolean
 }

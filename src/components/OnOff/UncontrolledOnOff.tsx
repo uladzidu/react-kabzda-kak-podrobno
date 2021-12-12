@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-export const UncontrolledOnOff = (props: PropsType) => {
+export const UncontrolledOnOff = () => {
 
     let [on, setOn] = useState(false);
 
@@ -35,12 +35,8 @@ export const UncontrolledOnOff = (props: PropsType) => {
             <button style={buttonOn} onClick={() => {setOn(true)}}>On
             </button>
             <button style={buttonOff} onClick={() => {setOn(false)}}>Off</button>
-            <button style={circle}></button>
+            <button style={circle}/>
         </div>
     )
 
-}
-
-type PropsType = {
-    // on: boolean
 }

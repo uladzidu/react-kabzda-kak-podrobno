@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css'
 import {UncontrolledOnOff} from './components/OnOff/UncontrolledOnOff';
 import {UncontrolledAccordion} from './components/Accordion/UncontrolledAccordion';
-import { UncontrolledRating } from './components/Rating/UncontrolledRating';
+import {UncontrolledRating} from './components/Rating/UncontrolledRating';
+import {ControlledOnOff} from './components/OnOff/ControlledOnOff';
 
 
 export function App() {
@@ -11,15 +12,7 @@ export function App() {
             <UncontrolledOnOff/>
             <UncontrolledAccordion title='--Menu--'/>
             <UncontrolledRating/>
+            <ControlledOnOff on={false}/>
         </div>
     )
-}
-
-function PageTitle(props: PagePropsType) {
-    return <h1>{props.title}</h1>
-}
-
-
-type PagePropsType = {
-    title: string
 }
