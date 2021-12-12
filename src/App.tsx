@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css'
-import {OnOff} from './components/OnOff/OnOff';
+import {UncontrolledOnOff} from './components/OnOff/UncontrolledOnOff';
 import {UncontrolledAccordion} from './components/Accordion/UncontrolledAccordion';
+import { UncontrolledRating } from './components/Rating/UncontrolledRating';
 
 
 export function App() {
     return (
-        <div>
-            <OnOff/>
+        <div className = 'AppClassName'>
+            <UncontrolledOnOff/>
             <UncontrolledAccordion title='--Menu--'/>
-            <UncontrolledAccordion title='--User--'/>
+            <UncontrolledRating/>
         </div>
     )
 }

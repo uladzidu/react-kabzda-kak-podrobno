@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-export const OnOff = (props: PropsType) => {
+export const UncontrolledOnOff = (props: PropsType) => {
 
     let [on, setOn] = useState(false);
 

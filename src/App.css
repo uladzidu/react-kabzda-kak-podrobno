@@ -6,3 +6,8 @@
 .App > div {
   margin-right: 50px;
 }
+
+.AppClassName {
+  width: 400px;
+  margin: 20px auto;
+}
