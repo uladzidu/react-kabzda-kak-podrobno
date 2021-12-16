@@ -29,8 +29,8 @@ export const ControlledOnOff = (props: PropsType) => {
     }
     return (
         <div>
-            <button style={buttonOn}>On</button>
-            <button style={buttonOff}>Off</button>
+            <button onClick={()=>{props.setOnOff(props.on)}}>On</button>
+            <button onClick={()=>{props.setOnOff(!props.on)}}>Off</button>
             <button style={circle}/>
         </div>
     )
@@ -39,4 +39,5 @@ export const ControlledOnOff = (props: PropsType) => {
 
 type PropsType = {
     on: boolean
+    setOnOff : (on: boolean) => void
 }

@@ -1,12 +1,8 @@
 import React from 'react';
 
-export type RatingValueType = {
-    value: 0 | 1 | 2 | 3 | 4 | 5
-}
-
 type RatingPropsType = {
-    value: RatingValueType
-    onClick: (value: RatingValueType) => void
+    value: number
+    onClick: (value: number) => void
 }
 
 export function Rating(props: RatingPropsType) {
@@ -23,10 +19,12 @@ export function Rating(props: RatingPropsType) {
 
 type StarPropsType = {
     selected: boolean
-    onClick: (value: RatingValueType) => void
-    value: RatingValueType
+    onClick: (value: number) => void
+    value: number
 }
 
 export function Star(props: StarPropsType) {
-    return <span>{props.selected ? <b>star </b> : 'star '}</span>
+    return <span onClick={() => {
+        props.onClick(props.value)
+    }}>{props.selected ? <b>star </b> : 'star '}</span>
 }
