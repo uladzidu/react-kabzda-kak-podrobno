@@ -12,19 +12,18 @@ import {ControlledAccordion} from './components/Accordion/ControlledAccordion';
 export function App() {
 
     let [ratingValue, setRatingValue] = useState(4);
-    let [onOff, setOnOff] = useState(false)
+    let [onOffValue, setOnOffValue] = useState(false)
     let [accordionCollapsed,setAccordionCollapsed] = useState(false)
 
     return (
         <div className="AppClassName">
-            <UncontrolledOnOff/>
             <UncontrolledAccordion title="--Menu--"/>
             <ControlledAccordion title="--Menu--"
                                  collapsed={accordionCollapsed}
                                  setAccordionCollapsed = {setAccordionCollapsed} />
             <UncontrolledRating/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <ControlledOnOff on={onOff} setOnOff={setOnOff}/>
+            <ControlledOnOff onOff={onOffValue} setOnOff={setOnOffValue}/>
             <UncontrolledOnOff/>
         </div>
     )
