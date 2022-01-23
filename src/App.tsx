@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './App.css'
-import {UncontrolledOnOff} from './components/OnOff/UncontrolledOnOff';
-import {UncontrolledAccordion} from './components/Accordion/UncontrolledAccordion';
-import {UncontrolledRating} from './components/Rating/UncontrolledRating';
+import {UncontrolledOnOff} from './components/UncontroledOnOff/UncontrolledOnOff';
+import {UncontrolledAccordion} from './components/UncontrolledAccordion/UncontrolledAccordion';
+import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
 import {ControlledOnOff} from './components/OnOff/ControlledOnOff';
 import {Rating} from './components/Rating/Rating';
 import {ControlledAccordion} from './components/Accordion/ControlledAccordion';
@@ -23,7 +23,7 @@ export function App() {
                                  setAccordionCollapsed = {setAccordionCollapsed} />
             <UncontrolledRating/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <ControlledOnOff onOff={onOffValue} setOnOff={setOnOffValue}/>
+            <ControlledOnOff on={onOffValue} setOnOff={setOnOffValue}/>
             <UncontrolledOnOff/>
         </div>
     )

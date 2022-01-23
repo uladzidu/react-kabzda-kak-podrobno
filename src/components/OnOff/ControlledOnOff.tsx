@@ -1,6 +1,11 @@
 import React from 'react'
 
 
+type PropsType = {
+    on: boolean
+    setOnOff: (on: boolean) => void
+}
+
 export const ControlledOnOff = (props: PropsType) => {
 
     const circle = {
@@ -11,21 +16,21 @@ export const ControlledOnOff = (props: PropsType) => {
         marginLeft: '15px',
         display: 'inline-block',
         marginTop: '50px',
-        backgroundColor: props.onOff ? 'limegreen' : 'red'
+        backgroundColor: props.on ? 'limegreen' : 'red'
     }
     const buttonOff = {
         height: '40px',
         width: '70px',
         border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: props.onOff ? 'white' : 'red'
+        backgroundColor: props.on ? 'white' : 'red'
     }
     const buttonOn = {
         height: '40px',
         width: '70px',
         border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: props.onOff ? 'limegreen' : 'white'
+        backgroundColor: props.on ? 'limegreen' : 'white'
     }
     return (
         <div>
@@ -38,7 +43,3 @@ export const ControlledOnOff = (props: PropsType) => {
     )
 }
 
-type PropsType = {
-    onOff: boolean
-    setOnOff: (on: boolean) => void
-}
