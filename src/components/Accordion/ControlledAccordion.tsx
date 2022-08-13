@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 
 
 type AccordionPropsType = {
@@ -6,7 +6,6 @@ type AccordionPropsType = {
     collapsed: boolean
     setAccordionCollapsed: (collapsed: boolean) => void
 }
-
 type AccordionTitlePropsType = {
     title: string
     setAccordionCollapsed: (collapsed: boolean) => void
@@ -14,6 +13,7 @@ type AccordionTitlePropsType = {
 }
 
 export function ControlledAccordion(props: AccordionPropsType) {
+    console.log('ControlledAccordion')
     return (
         <div>
             <AccordionTitle title={props.title} setAccordionCollapsed={props.setAccordionCollapsed} collapsed={props.collapsed}/>
@@ -23,13 +23,13 @@ export function ControlledAccordion(props: AccordionPropsType) {
     )
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+export function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <h3 onClick={()=>{props.setAccordionCollapsed(!props.collapsed)}}>{props.title}</h3>
+        <h3 onClick={ () => {props.setAccordionCollapsed(!props.collapsed)} }>{props.title}</h3>
     )
 }
 
-function AccordionBody() {
+export function AccordionBody() {
     return (
         <ul>
             <li>1</li>

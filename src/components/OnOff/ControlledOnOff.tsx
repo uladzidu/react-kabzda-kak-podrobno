@@ -32,12 +32,11 @@ export const ControlledOnOff = (props: PropsType) => {
         display: 'inline-block',
         backgroundColor: props.on ? 'limegreen' : 'white'
     }
+    console.log('ControlledOnOff')
     return (
         <div>
-            <button style={buttonOn} onClick={() => {props.setOnOff(true)}}>On
-            </button>
-            <button style={buttonOff} onClick={() => {props.setOnOff(false)}}>Off
-            </button>
+            <button style={buttonOn} onClick={() => {props.setOnOff(true)}}>On</button>
+            <button style={buttonOff} onClick={() => {props.setOnOff(false)}}>Off</button>
             <button style={circle}/>
         </div>
     )

@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 export function UncontrolledRating() {
 
     let [value, setValue] = useState(0);
-
+    console.log('UncontrolledRating')
     return (
         <div>
             <Star selected={value > 0} setValue={setValue} value={1} />

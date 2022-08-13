@@ -1,30 +1,28 @@
-import React, {useState} from 'react'
-
+import React, {useReducer} from 'react'
+import {reducer} from "./Reducer";
 
 type AccordionTitlePropsType = {
-    title: string
+    title : string
     onClick : () => void
 }
 
-type UncontrolledAccordionPropsType = {
-    title : string
-}
+export function UncontrolledAccordion() {
 
-export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
-
-    let [collapsed, setCollapsed] = useState(true);
+    console.log('UncontrolledAccordion')
+   // let [collapsed, setCollapsed] = useState(true);
+    let [collapsed, dispatch] = useReducer(reducer, true);
 
         return (
             <div>
-                <AccordionTitle title={props.title} onClick={ () => {setCollapsed(!collapsed)} } />
+                <AccordionTitle title={'Menu'} onClick={ () => {dispatch({type : 'TOGGLE'})} } />
                 {!collapsed && <AccordionBody/>}
             </div>
         )
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+function AccordionTitle(props : AccordionTitlePropsType) {
     return (
-        <h3 onClick={ () => {props.onClick()} }>{props.title}</h3>
+        <h3 onClick={props.onClick} >{props.title}</h3>
     )
 }
 

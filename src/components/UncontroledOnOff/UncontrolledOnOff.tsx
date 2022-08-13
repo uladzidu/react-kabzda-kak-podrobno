@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 export const UncontrolledOnOff = () => {
 
     let [on, setOn] = useState(false);
-
+    console.log('UncontrolledOnOff')
 
     const circle = {
         height: '20px',
